@@ -20,6 +20,7 @@ jobs:
     inputs:
       command: 'buildAndPush'
       repository: '$(containerRegistry)/$(imageName)'
-      Dockerfile: '$(dockerfilePath)'
+      dockerfile: '$(dockerfilePath)'
+      context: '$(Build.SourcesDirectory)'
       tags: |
         $(tag)
